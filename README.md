@@ -1,7 +1,5 @@
 # NeuroTunes
-
-This repository accompanies our submission to NeurIPS GenAI4Health 2026
-(Demonstration track). NeuroTunes is a research/education platform and
+NeuroTunes is a research/education platform and
 not a medical device. We don't make any clinical efficacy claims.
 
 ## Overview
