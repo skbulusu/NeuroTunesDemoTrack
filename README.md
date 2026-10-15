@@ -2,26 +2,6 @@
 NeuroTunes is a research/education platform and
 not a medical device. We don't make any clinical efficacy claims.
 
-## Overview
-
-Before any human study or IRB protocol, we wanted a way to build, run, and
-stress-test a therapeutic-music pipeline end-to-end. This
-repo has the pieces that make both the platform and its evaluation
-reproducible:
-
-- a consent-gated API serving three personas (patient, clinician, researcher)
-  through one request path: assessment -> EmotionNet -> deterministic
-  renderer -> safety validator -> delivered audio
-- a synthetic longitudinal patient-cohort generator (14 conditions, explicit
-  realism axes like medication adherence and response archetype)
-- an open-weight LLM used as a deterministic clinical annotator, paired with
-  a simulated multi-rater uncertainty model that flags low-confidence labels
-- EmotionNet, the small deployable model trained on those labels
-- a distillation ablation
-- an independent, MERT-based audio critic (Music2Emo) that sits in the
-  promote/rollback gate for retraining
-- a Python SDK and versioned REST API for researchers
-
 Trained weights aren't included in this repo. All weights are closed, see
 `NOTICE` / `MODEL_CARD.md`.
 
@@ -93,8 +73,7 @@ docker compose -f deploy/docker-compose-ml.yml up -d --build
 
 Open `http://localhost:3000`. Mint yourself a local API key with
 `node api/scripts/create_api_key.js "demo key"`, then use it in the
-researcher console or with the SDK. `qa/test_researcher_api.sh` is a
-scripted smoke test against a running instance.
+researcher console or with the SDK. 
 
 ## License
 
