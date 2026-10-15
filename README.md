@@ -1,6 +1,7 @@
 # NeuroTunes
 NeuroTunes is a research/education platform and
-not a medical device. We don't make any clinical efficacy claims.
+not a medical device. We don't make any clinical efficacy claims. The methods here are the subject of a pending
+U.S. patent application.
 
 Trained weights aren't included in this repo. All weights are closed, see
 `NOTICE` / `MODEL_CARD.md`.
@@ -74,9 +75,3 @@ docker compose -f deploy/docker-compose-ml.yml up -d --build
 Open `http://localhost:3000`. Mint yourself a local API key with
 `node api/scripts/create_api_key.js "demo key"`, then use it in the
 researcher console or with the SDK. 
-
-## License
-
-Apache-2.0, see `LICENSE`. The methods here are the subject of a pending
-U.S. patent application — see `NOTICE`. Trained weights are closed. See
-`MODEL_CARD.md`.
